@@ -1,0 +1,54 @@
+.fuelArea{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.FuelForm {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 50%);
+}
+
+.FuelForm label {
+    font-family: Arial;
+    font-size: 14px;
+    margin: 10px 0px 3px 0;
+    color: #333;
+}
+
+.fuelSelect {
+    padding: 7px 5px;
+}
+
+.fuelAmountSelect {
+    padding: 7px 5px;
+}
+
+.fuelSubmit {
+    padding: 9px 5px;
+    margin-top: 20px;
+    background-color: #FECB00;
+    border: 2px solid #D52B1E;
+    border-radius: 5px;
+    color: #D52B1E;
+    font-weight: bold;
+}
+
+.resultArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.resultArea p {
+    margin: 0;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.resultArea span {
+    color: #555;
+}
