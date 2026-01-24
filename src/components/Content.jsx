@@ -16,7 +16,8 @@ const Content = () => {
         const type = e.target.fuel.value;
         const amount = parseFloat(e.target.amount.value);
         const total = CalcFuel(type, amount);
-
+        const resultArea = document.querySelector(".resultArea");
+        resultArea.style.display = "block";
         setFuelType(type);
         setAmount(amount);
         setTotal(total);
@@ -37,15 +38,30 @@ const Content = () => {
                         <option value="Electric">Electric</option>
                     </select>
                     <label>Fuel Amount:</label>
-                    <input className='fuelAmountSelect' type='number' name='amount' placeholder='(l/kw)'></input>
+                    <input className='fuelAmountSelect' type='number' name='amount' placeholder='(l/kw)' required></input>
                     <button className='fuelSubmit' type="submit">Calculate</button>
                 </form>
             </div>
 
             <div className='resultArea'>
-                <p className='fuel_type'>Fuel Type: <span>{fuelType}</span></p>
-                <p className='total_fuel'>Total Fuel: <span>{amount} l/kw</span></p>
-                <p className='total_payment'>Total Payment: <span>{total.toFixed(2)} AZN</span></p>
+                {fuelType && (
+                    <>
+                        <div className='resultHeader'>Receipt</div>
+                        <div className='resultItem'>
+                            <span className='resultLabel'>Fuel Type:</span>
+                            <span className='resultValue'>{fuelType}</span>
+                        </div>
+                        <div className='resultItem'>
+                            <span className='resultLabel'>Amount:</span>
+                            <span className='resultValue'>{amount} l/kw</span>
+                        </div>
+                        <div className='resultDivider'></div>
+                        <div className='resultItem total'>
+                            <span className='resultLabel'>Total:</span>
+                            <span className='resultValue'>{total.toFixed(2)} AZN</span>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     )
