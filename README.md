@@ -1,16 +1,51 @@
-# React + Vite
+# Shell Yanacaqdoldurma Stansiyası (Mini App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu layihə React + Vite istifadə edilərək hazırlanmış sadə bir mini tətbiqdir. Məqsəd `useState` və JSON faylı (`data/tarif.json`) vasitəsilə yanacaq seçimi, qiymət və hesablamaların necə təşkil olunmasını nümayiş etdirməkdir.
 
-Currently, two official plugins are available:
+**Daha ətraflı oxu:** [React ilə mini Shell yanacaqdoldurma stansiyası — useState + JSON DB](https://medium.com/@samirrhashimov/react-ilə-mini-shell-yanacaqdoldurma-stansiyası-usestate-json-db-a154671fb21b)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Başlanğıc
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tələb olunanlar:
 
-## Expanding the ESLint configuration
+- Node.js
+- npm və ya yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Quraşdırma və işə salma:
+
+```bash
+npm install
+npm run dev
+```
+
+## Layihə strukturu
+
+- `src/` — mənbə fayllar
+  - `components/` — komponentlər (`Content.jsx`, `Navbar.jsx` və s.)
+- `data/tarif.json` — nümunə tarif məlumatları (lokal JSON DB kimi istifadə olunur)
+- `index.html`, `package.json`, `vite.config.js` və s.
+
+## İstifadəçi üçün qısa izah
+
+Tətbiq istifadəçiyə yanacaq növü seçmək, miqdarı daxil etmək və ümumi məbləği görmək imkanı verir. Məzmun əsasən React `useState` hook-u ilə idarə olunur və `data/tarif.json` faylı nümunə verilənlər bazası kimi xidmət edir.
+
+> Qeyd: Bu sayt yalnızca tədris məqsədlidir; Shell şirkəti ilə heç bir bağlantısı yoxdur. Real dünya ödəniş/logika sistemi təmin etmir.
+
+## Texnologiyalar
+
+- React
+- Vite
+- CSS
+- Yerli JSON (data)
+
+## Müəllif & Mənbə 📚
+
+Müəllif: Samir Hashimov — layihə haqqında ətraflı texniki izahat üçün Medium yazısını oxuyun:
+
+https://medium.com/@samirrhashimov/react-ilə-mini-shell-yanacaqdoldurma-stansiyası-usestate-json-db-a154671fb21b
+
+---
+
+**Lisenziya:** Açıq mənbə (istifadə və paylaşma sərbəstdir).
